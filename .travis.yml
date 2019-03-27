@@ -4,5 +4,5 @@ compiler:
  - clang
  - gcc
  script:
- - gcc -o test test.c 
+ - gcc -o test test.c //we can use gccc instead of clang too
  - ./test 
