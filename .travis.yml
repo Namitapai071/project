@@ -1,8 +1,10 @@
-language: c
- sudo: false # only for faster builds
-compiler: 
- - clang
- - gcc
- script:
- - gcc -o blink blink.c // we can use gcc instead of clang too
- - ./blink 
+matrix:
+  include:    
+    - language: c  
+      sudo: false # only for faster builds  
+      compiler:
+        - clang
+        - gcc
+      script:  
+        - gcc -o blink blink.c 
+        - ./blink
